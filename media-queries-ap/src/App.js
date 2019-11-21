@@ -24,7 +24,6 @@ class App extends Component {
         {!this.state.toggleMenu 
         ? (<header id="header-container">
             <div className="logo"> Start Bootstrap </div>
-            <nav className="stickynavbar">
               <nav id="nav-links">
                 <a href="#services">SERVICES</a>
                 <a href="#portfolio">PORTFOLIO</a>
@@ -32,27 +31,31 @@ class App extends Component {
                 <a href="#team">TEAM</a>
                 <a href="#contact">CONTACT</a>
               </nav>
-            </nav>
-            <button id="hamburgerbtn">  MENU <FontAwesomeIcon icon="bars" id="hamburger" onClick={this.handleToggle} />
+           
+            <button id="hamburgerbtn" onClick={this.handleToggle}>  MENU <FontAwesomeIcon icon="bars" id="hamburger" />
             </button>
           </header>
         ) : (
           <>
             <header id="header-container">
+            <nav id="nav-links">
+                <a href="#services">SERVICES</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#about">ABOUT</a>
+                <a href="#team">TEAM</a>
+                <a href="#contact">CONTACT</a>
+              </nav>
               <div className="logo"> Start Bootstrap </div>
-              
-              <button id="hamburgerbtn">  MENU <FontAwesomeIcon icon="bars" id="hamburger" onClick={this.handleToggle} />
+              <button id="hamburgerbtn" onClick={this.handleToggle} >  MENU <FontAwesomeIcon icon="bars" id="hamburger" />
               </button>
-              <nav id='drop-menu'>
+            </header>
+            <nav id='drop-menu'>
                   <a href="#services">SERVICES</a>
                   <a href="#portfolio">PORTFOLIO</a>
                   <a href="#about">ABOUT</a>
                   <a href="#team">TEAM</a>
                   <a href="#contact">CONTACT</a>
-                
                 </nav>
-            </header>
-            
           </>
         )}
 
@@ -64,7 +67,7 @@ class App extends Component {
        
         <div id="welcome"> Welcome to Our Studio! </div>
         <div id="meet"> IT'S NICE TO MEET YOU </div>
-        <button id="tmm"> Tell Me More </button>
+        <button id="tmm"> TELL ME MORE </button>
       </div>
     );
   }
